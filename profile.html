@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="body.css">
+    <title>My Profile - Tohfaaz.co</title>
+</head>
+<body>
+    <div class="nav">
+        <img id="logo" src="logo.jpeg" alt="Tohfaaz Logo">
+        <div class="search-wrapper">
+            <input class="search" type="search" placeholder="Search">
+            <button class="btn"><i class="ri-search-line"></i></button>
+        </div>
+        <button class="profile" id="profile-btn"><i class="ri-user-line"></i></button>
+        <a href="cart.html" class="cart-link">
+            <button><i class="ri-shopping-cart-2-line"></i></button>
+        </a>
+    </div>
+
+   
+    <!-- Login/Signup Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Signup</button>
+            </div>
+            <div class="modal-body">
+                <div id="login-form" class="form-content active">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div id="signup-form" class="form-content">
+                    <h2>Signup</h2>
+                    <form>
+                        <label for="signup-name">Name:</label>
+                        <input type="text" id="signup-name" name="signup-name" required>
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" name="signup-email" required>
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="signup-password" required>
+                        <button type="submit">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

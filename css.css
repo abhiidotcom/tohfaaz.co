@@ -1,0 +1,325 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3a3a3a;
+}
+
+.nav {
+    background-color: #000;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+/* Search input and button wrapper */
+.search-wrapper {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center contents horizontally */
+}
+
+.search {
+    width: 100%; /* Use 100% width of parent */
+    max-width: 300px; /* Limit maximum width for responsiveness */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+}
+
+button {
+    padding: 12px 20px; /* Increased padding for better clickability */
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+button:hover {
+    background-color: #6d6d6d; /* Darken background color on hover */
+}
+
+#logo {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.profile {
+    margin-left: auto; /* Aligns button to the right */
+}
+.btn {
+    padding: 12px 15px;
+    background-color: rgb(250, 205, 3);
+    border: none;
+    outline: none;
+    color: rgb(2, 2, 2);
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #ff9100; /* Darken background color on hover */
+    box-shadow: 0 2px 5px rgba(255, 188, 5, 0.404); /* Add subtle shadow on hover */
+}
+.cart-link {
+    text-decoration: none; /* Remove underline from anchor */
+    color: white; /* Button text color */
+}
+
+
+
+
+
+
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 { color: azure;
+    font-size: 5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.yellow-text {
+    color: rgb(255, 217, 0);
+}
+
+#typed-text { color: #ffe240;
+    border-right: solid rgb(255, 153, 0);
+font-size: larger;}
+
+
+
+
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: rgb(250, 205, 3);
+    border: none;
+    outline: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #ff9100;
+    box-shadow: 0 2px 5px rgba(255, 188, 5, 0.404);
+}
+
+/* Banner Container */
+.banner-container {
+    position: relative;
+    width: 95vw; /* Full viewport width */
+    height: 80vh;
+    
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner Slides */
+.banner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.banner-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.banner-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Tabs */
+.modal-tabs {
+    
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    font-family: impact;
+    border-radius: 5px;
+    flex: 1;
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tab-btn.active {
+    background-color: #ffd900;
+    color: rgb(0, 0, 0);
+}
+
+/* Form Content */
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #616161;
+}
